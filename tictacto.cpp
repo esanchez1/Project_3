@@ -1,13 +1,11 @@
 #include <iostream>
+#include "tictacto.h"
 using namespace std;
 bool flag1 = false;
 bool flag2 = false;
 
-char board[3][3]={{' ',' ', ' '},
-                  {' ',' ', ' '}, 
-                  {' ',' ', ' '}};;
 
-void Board()
+void tictacto::Board()
 {
     cout << "1   2   3" << endl;
     for(int i = 0; i < 3; i++)
@@ -40,7 +38,7 @@ void Board()
     cout << endl;
 }
 
-void player1()
+void tictacto::player1()
 {
     int row1;
     int col1;
@@ -87,7 +85,7 @@ void player1()
     board[row1 - 1][col1 - 1] = 'O';
 }
 
-void player2()
+void tictacto::player2()
 {
     int row2;
     int col2;
@@ -132,11 +130,11 @@ void player2()
     board[row2 - 1][col2 - 1] = 'X';
 }
 
-void winningcondition()
+void tictacto::winningcondition()
 {
     for(int i = 0; i < 3; i++)
     {
-        if(board[i][0] == board[i][1] & board[i][0] == board[i][2] & board[i][1] == board[i][2] & board[i][0] != ' ')
+        if(board[i][0] == board[i][1] && board[i][0] == board[i][2] && board[i][1] == board[i][2] && board[i][0] != ' ')
         {
             if(board[i][0] == 'O')
             {
@@ -147,7 +145,7 @@ void winningcondition()
                 flag2 = true;
             }
         }
-        if(board[0][i] == board[1][i] & board[1][i] == board[2][i] & board[0][i] == board[2][i] & board[0][i] != ' ')
+        if(board[0][i] == board[1][i] && board[1][i] == board[2][i] && board[0][i] == board[2][i] && board[0][i] != ' ')
         {
             if(board[0][i] == 'O')
             {
@@ -158,7 +156,7 @@ void winningcondition()
                 flag2 = true;
             }
         }
-        if(board[0][2] == board[1][1] & board[1][1] == board[2][0] & board[0][2] == board[2][0] & board[2][0] != ' ')
+        if(board[0][2] == board[1][1] && board[1][1] == board[2][0] && board[0][2] == board[2][0] && board[2][0] != ' ')
         {
             if(board[1][1] == 'O')
             {
@@ -169,7 +167,7 @@ void winningcondition()
                 flag2 = true;
             }
         }
-        if(board[0][0] == board[1][1] & board[1][1] == board[2][2] & board[0][0] == board[2][2] & board[0][0] != ' ')
+        if(board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[0][0] == board[2][2] && board[0][0] != ' ')
         {
             if(board[1][1] == 'O')
             {
@@ -184,7 +182,7 @@ void winningcondition()
 }
 
 
-void begin()
+void tictacto::begin()
 {
     int num = 0;
     bool flag = false;
@@ -208,20 +206,23 @@ void begin()
     }
 }
 
-int main()
+void tictacto::run()
 {
     Board();
     begin();
     if(flag1 == true)
     {
         cout << "player1 wins!" << endl;
+        flag1 = false;
     }
-    if(flag2 == true)
+    else if(flag2 == true)
     {
         cout << "player2 wins!" << endl;
+        flag2 = false;
     }
-    if(flag1 == flag2)
+    else if(flag1 == flag2)
     {
         cout << "No one wins!" << endl;
     }
+
 }
