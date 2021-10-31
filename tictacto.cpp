@@ -53,14 +53,15 @@ void tictacto::player1()
         {
             cin.clear();
             cin.ignore();         
-            cout << "Invalid input, please enter again!" << endl;          
+            cout << "Invalid input, please enter again!" << endl;
+            row1 = 0;          
         }      
     }
 
     for( ; ; )
     {
         cout << "Enter a col: ";
-        if(cin >> col1 && col1 != 0)
+        if(cin >> col1 && col1 >= 1 && col1 <= 3)
         {                     
             break;
         }                 
@@ -68,7 +69,8 @@ void tictacto::player1()
         {
             cin.clear();
             cin.ignore();         
-            cout << "Invalid input, please enter again!" << endl;          
+            cout << "Invalid input, please enter again!" << endl;
+            col1 = 0;          
         }
           
     }
@@ -100,14 +102,15 @@ void tictacto::player2()
         {
             cin.clear();
             cin.ignore();         
-            cout << "Invalid input, please enter again!" << endl;          
+            cout << "Invalid input, please enter again!" << endl;
+            row2 = 0;          
         }      
     }
 
     for( ; ; )
     {
         cout << "Enter a col: ";
-        if(cin >> col2 && col2 != 0)
+        if(cin >> col2 && col2 >= 1 && col2 <= 3)
         {                     
             break;
         }                 
@@ -115,7 +118,8 @@ void tictacto::player2()
         {
             cin.clear();
             cin.ignore();         
-            cout << "Invalid input, please enter again!" << endl;          
+            cout << "Invalid input, please enter again!" << endl;
+            col2 = 0;          
         }
           
     }  
