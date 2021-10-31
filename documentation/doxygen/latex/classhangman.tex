@@ -1,0 +1,113 @@
+\hypertarget{classhangman}{}\doxysection{hangman Class Reference}
+\label{classhangman}\index{hangman@{hangman}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classhangman_a842e49d081010609264976938fab6fb0}{randomly\+Generate\+Word}} ()
+\item 
+bool \mbox{\hyperlink{classhangman_aaf93d2cf266f17277c300157ee894ae4}{func\+For\+Wrong\+Guess}} (int num\+Guesses)
+\item 
+void \mbox{\hyperlink{classhangman_afd811e2266d8008073d5eef34b10a688}{display\+Stick\+Figure}} (int num\+Guesses)
+\item 
+\mbox{\hyperlink{classhangman_a773a28f2f84a5aa0c94972b841b7cbc2}{hangman}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhangman_a773a28f2f84a5aa0c94972b841b7cbc2}\label{classhangman_a773a28f2f84a5aa0c94972b841b7cbc2}} 
+\index{hangman@{hangman}!hangman@{hangman}}
+\index{hangman@{hangman}!hangman@{hangman}}
+\doxysubsubsection{\texorpdfstring{hangman()}{hangman()}}
+{\footnotesize\ttfamily hangman\+::hangman (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyPrecond}{Precondition}
+\+: hangman is the game the player chooses to play 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+\+: allows the user to guess letters of a secret word until they either guess all the letters correctly or run out of guesses 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em } & none \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+cleany exits game if something that isn\textquotesingle{}t an integer (such as a char) is given when the program is asking for an integer 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classhangman_afd811e2266d8008073d5eef34b10a688}\label{classhangman_afd811e2266d8008073d5eef34b10a688}} 
+\index{hangman@{hangman}!displayStickFigure@{displayStickFigure}}
+\index{displayStickFigure@{displayStickFigure}!hangman@{hangman}}
+\doxysubsubsection{\texorpdfstring{displayStickFigure()}{displayStickFigure()}}
+{\footnotesize\ttfamily void hangman\+::display\+Stick\+Figure (\begin{DoxyParamCaption}\item[{int}]{num\+Guesses }\end{DoxyParamCaption})}
+
+\begin{DoxyPrecond}{Precondition}
+\+: expects valid integer as parameter 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+\+: void function that outputs the stick figure corresponding to the number of wrong guesses the player has made 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em } & an integer that represents the number of wrong guesses \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+none \mbox{\Hypertarget{classhangman_aaf93d2cf266f17277c300157ee894ae4}\label{classhangman_aaf93d2cf266f17277c300157ee894ae4}} 
+\index{hangman@{hangman}!funcForWrongGuess@{funcForWrongGuess}}
+\index{funcForWrongGuess@{funcForWrongGuess}!hangman@{hangman}}
+\doxysubsubsection{\texorpdfstring{funcForWrongGuess()}{funcForWrongGuess()}}
+{\footnotesize\ttfamily bool hangman\+::func\+For\+Wrong\+Guess (\begin{DoxyParamCaption}\item[{int}]{num\+Guesses }\end{DoxyParamCaption})}
+
+\begin{DoxyPrecond}{Precondition}
+\+: expects valid integer as parameter 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+\+: returns true if there have been less than 6 guesses or 6 guesses and false otherwise 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em } & an integer that represents the number of wrong guesses is passed as a parameter \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+none \mbox{\Hypertarget{classhangman_a842e49d081010609264976938fab6fb0}\label{classhangman_a842e49d081010609264976938fab6fb0}} 
+\index{hangman@{hangman}!randomlyGenerateWord@{randomlyGenerateWord}}
+\index{randomlyGenerateWord@{randomlyGenerateWord}!hangman@{hangman}}
+\doxysubsubsection{\texorpdfstring{randomlyGenerateWord()}{randomlyGenerateWord()}}
+{\footnotesize\ttfamily string hangman\+::randomly\+Generate\+Word (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyPrecond}{Precondition}
+\+: none 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+\+: returns a random word from an array of strings of cs related words 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em } & none \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em } & \\
+\hline
+\end{DoxyExceptions}
+none 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+hangman.\+h\item 
+hangman.\+cpp\end{DoxyCompactItemize}
