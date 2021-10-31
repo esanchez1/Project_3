@@ -60,7 +60,7 @@ void tictacto::player1()
     for( ; ; )
     {
         cout << "Enter a col: ";
-        if(cin >> col1)
+        if(cin >> col1 && col1 != 0)
         {                     
             break;
         }                 
@@ -107,7 +107,7 @@ void tictacto::player2()
     for( ; ; )
     {
         cout << "Enter a col: ";
-        if(cin >> col2)
+        if(cin >> col2 && col2 != 0)
         {                     
             break;
         }                 
