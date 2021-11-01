@@ -4,7 +4,6 @@
 #include <cstdlib>
 #include <time.h>
 #include <ctime>
-char head = '\2';
 
 string hangman::randomlyGenerateWord(){
 std::string arr[10];
@@ -55,27 +54,27 @@ if (numGuesses==0)
   }
   else if (numGuesses==1)
   {
-    cout << head << endl;
+    std::cout<< "O\n";
   }
   else if (numGuesses==2)
   {
-    std::cout << head << "\n|\n";
+    std::cout << "O\n|\n";
   }
   else if (numGuesses==3)
   {
-    std::cout << " " << head << "\n" << "\\" << "|" << "\n";
+    std::cout << " " << "O\n" << "\\" << "|" << "\n";
   }
   else if (numGuesses==4)
   {
-    std::cout << " " << head << "\n" << "\\" << "|" << "/" << "\n";
+    std::cout << " " << "O\n" << "\\" << "|" << "/" << "\n";
   }
   else if (numGuesses==5)
   {
-    std::cout << " " << head << "\n" << "\\" << "|" << "/" << "\n" << " /\n";
+    std::cout << " " << "O\n" << "\\" << "|" << "/" << "\n" << " /\n";
   }
   else
   {
-    std::cout << " " << head << "\n" << "\\" << "|" << "/" << "\n" << " /\\\n";
+    std::cout << " " << "O\n" << "\\" << "|" << "/" << "\n" << " /\\\n";
   }
 
 }
